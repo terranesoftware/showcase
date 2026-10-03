@@ -12,9 +12,7 @@ export default function Home() {
         <Card key={product.name} {...product} />
       ))}
       <footer className={styles.footer}>
-        <a className={`${styles.closer} link`} href="#header">
-          Damn, did it have to end?
-        </a>
+        <a className={`${styles.closer} link`} href="#header">Uh, what do we do now?</a>
       </footer>
     </main>
   );

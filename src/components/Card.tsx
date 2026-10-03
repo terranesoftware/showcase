@@ -21,10 +21,17 @@ const basin: Product = {
   repository: "https://github.com/terranesoftware/basin"
 }
 
+const gangway: Product = {
+  name: "gangway",
+  description: "It's like playing telephone — but with one person, repeatedly.",
+  repository: "https://github.com/terranesoftware/gangway"
+};
+
 const rebus: Product = {
   name: "rebus",
-  description: "",
-  repository: "https://github.com/terranesoftware/rebus"
+  description: "Dissociative identity disorder.",
+  repository: "https://github.com/terranesoftware/rebus",
+  builtOn: [gangway]
 };
 
 const crux: Product = {
@@ -38,19 +45,13 @@ const estate: Product = {
   name: "estate",
   description: "Rent out your terminal.",
   repository: "https://github.com/terranesoftware/estate",
-  builtOn: [rebus]
+  builtOn: [gangway]
 };
 
 const framboid: Product = {
   name: "framboid",
   description: "Rust implementation of the Varve specification.",
   repository: "https://github.com/terranesoftware/framboid"
-};
-
-const gangway: Product = {
-  name: "gangway",
-  description: "It's like playing telephone.",
-  repository: "https://github.com/terranesoftware/gangway"
 };
 
 const pecia: Product = {
@@ -74,7 +75,7 @@ const mizuchi: Product = {
 
 const koine: Product = {
   name: "koine",
-  description: "A universal, open format for quantitative analysis.",
+  description: "Yet another lingua franca.",
   repository: "https://github.com/terranesoftware/koine",
   family: [mizuchi]
 };
@@ -93,13 +94,13 @@ const ophite: Product = {
 
 const posit: Product = {
   name: "posit",
-  description: "",
+  description: "Seeing is believing.",
   repository: "https://github.com/terranesoftware/posit"
 };
 
 const varve: Product = {
   name: "varve",
-  description: "A universal, open format for work.",
+  description: "Work shouldn't go to waste.",
   repository: "https://github.com/terranesoftware/varve",
   family: [basin, framboid, mantle, ophite]
 };
@@ -118,6 +119,10 @@ export const products: Product[] = [
 ];
 
 export function Card({ name, description, repository, family, builtOn }: Product) {
+  if (name == "" || description == "" || repository == "") {
+    return null;
+  }
+  
   return (
     <article id={name} className={styles.product}>
       <div className={styles.title}>
