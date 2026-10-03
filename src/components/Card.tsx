@@ -1,3 +1,4 @@
+import { Fragment } from "react/jsx-runtime";
 import styles from "./Card.module.css";
 
 interface Product {
@@ -121,11 +122,31 @@ export function Card({ name, description, repository, family, builtOn }: Product
     <article id={name} className={styles.product}>
       <div className={styles.title}>
         <h2 className={styles.name}><a className="link" href={repository} target="_blank" rel="noopener noreferrer">{name}</a></h2>
-        {/* ADD FAMILY HERE */}
+        {family && (
+          <h3 className={styles.optional}>
+            {
+              family.map((product, index) => (
+                <Fragment key={product.name}>
+                  {index > 0 && " · "}
+                  <a className="link" href={product.repository} target="_blank" rel="noopener noreferrer">{product.name}</a>
+                </Fragment>
+              ))
+            }
+          </h3>
+        )}
+        {family && builtOn && <h3 className={`${styles.optional} ${styles.separator}`}> | </h3>}
         {builtOn && (
-            builtOn.map((product) => (
-              <h3 className={styles.builtOn}>Built on <a className="link" href={`#${product.name}`}>{product.name}</a></h3>
-            ))
+          <h3 className={styles.optional}>
+            Built on{" "}
+            {
+              builtOn.map((product, index) => (
+                <Fragment key={product.name}>
+                  {index > 0 && " and "}
+                  <a className="link" href={`#${product.name}`}>{product.name}</a>
+                </Fragment>
+              ))
+            }
+          </h3>
           )
         }
       </div>

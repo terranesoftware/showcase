@@ -9,8 +9,8 @@
 
 .title {
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
+    gap: 1rem;
 }
 
 .name {
@@ -20,11 +20,19 @@
     margin: 0;
 }
 
-.builtOn {
+.optional {
     font-size: max(40px, 2.5vw);
     font-weight: 600;
     letter-spacing: -0.045em;
     margin: 0;
+}
+
+.optional:first-of-type {
+    margin-left: auto;
+}
+
+.separator {
+    margin-inline: 1vw;
 }
 
 .description {
