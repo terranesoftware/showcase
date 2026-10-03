@@ -3,12 +3,18 @@
 :root {
     --background: #d2d4d1;
     --color: #591e2a;
+    --link: #334155;
+    --link-hover: #1e293b;
+    --link-select: #94a3b8;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #591e2a;
         --color: #d2d4d1;
+        --link: #94a3b8;
+        --link-hover: #cbd5e1;
+        --link-select: #334155;
     }
 }
 

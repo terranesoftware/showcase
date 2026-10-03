@@ -20,3 +20,34 @@
     padding-top: 1.25rem;
     font-size: max(14px, 1.7vw);
 }
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-inline: 4vw;
+}
+
+.closer {
+    margin-top: 3vh;
+    border-top: 2px solid var(--color);
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    font-size: max(14px, 1.0vw);
+    text-align: center;
+}
+
+.link {
+    color: var(--link);
+    transition: color 150ms ease;
+}
+
+.link:hover {
+    color: var(--link-hover)
+}
+
+.link::selection {
+    background: var(--color);
+    color: var(--link-select);
+}
