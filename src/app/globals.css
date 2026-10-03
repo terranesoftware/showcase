@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+:root {
+    --background: #d2d4d1;
+    --color: #591e2a;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #591e2a;
+        --color: #d2d4d1;
+    }
+}
+
+::selection {
+    background: var(--color);
+    color: var(--background);
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--color);
+}

@@ -1,0 +1,22 @@
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    overflow: hidden;
+    padding-inline: 4vw;
+}
+
+.title {
+    padding-top: 2vh;
+    font-size: max(115px, 23.1vw);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+}
+
+.tagline {
+    margin-top: 3vh;
+    border-top: 2px solid var(--color);
+    padding-top: 1.25rem;
+    font-size: max(14px, 1.7vw);
+}
