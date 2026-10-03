@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main>
-      <header className={styles.hero}>
+      <header id="header" className={styles.hero}>
         <h1 className={styles.title}>terrane</h1>
         <p className={styles.tagline}>Everything, eventually.</p>
       </header>
@@ -12,9 +12,9 @@ export default function Home() {
         <Card key={product.name} {...product} />
       ))}
       <footer className={styles.footer}>
-        <p className={styles.closer}>
-          That's all we have, so here's the <a className="link" href="https://github.com/terranesoftware/showcase">source</a>.
-        </p>
+        <a className={`${styles.closer} link`} href="#header">
+          Damn, did it have to end?
+        </a>
       </footer>
     </main>
   );
