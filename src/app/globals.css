@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
     --background: #d2d4d1;
     --color: #591e2a;
-    --link: #334155;
-    --link-hover: #1e293b;
-    --link-select: #94a3b8;
+    --link: #96797e;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #591e2a;
         --color: #d2d4d1;
-        --link: #94a3b8;
-        --link-hover: #cbd5e1;
-        --link-select: #334155;
+        --link: #96797e;
     }
 }
 
@@ -27,4 +27,12 @@ body {
     margin: 0;
     background: var(--background);
     color: var(--color);
+}
+
+.link {
+    transition: color 250ms ease;
+}
+
+.link:hover {
+    color: var(--link);
 }

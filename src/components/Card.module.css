@@ -1,0 +1,35 @@
+.product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-inline: 4vw;
+    margin-bottom: 15vh;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.name {
+    font-size: max(80px, 5vw);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    margin: 0;
+}
+
+.builtOn {
+    font-size: max(40px, 2.5vw);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    margin: 0;
+}
+
+.description {
+    margin-top: 3vh;
+    border-top: 2px solid var(--color);
+    padding-top: 1.25rem;
+    font-size: max(14px, 1.7vw);
+}
