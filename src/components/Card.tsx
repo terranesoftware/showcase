@@ -30,8 +30,7 @@ const gangway: Product = {
 const rebus: Product = {
   name: "rebus",
   description: "Dissociative identity disorder.",
-  repository: "https://github.com/terranesoftware/rebus",
-  builtOn: [gangway]
+  repository: "https://github.com/terranesoftware/rebus"
 };
 
 const crux: Product = {
@@ -44,8 +43,7 @@ const crux: Product = {
 const estate: Product = {
   name: "estate",
   description: "Rent out your terminal.",
-  repository: "https://github.com/terranesoftware/estate",
-  builtOn: [gangway]
+  repository: "https://github.com/terranesoftware/estate"
 };
 
 const framboid: Product = {
