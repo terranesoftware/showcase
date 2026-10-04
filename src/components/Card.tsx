@@ -6,7 +6,9 @@ interface Product {
   description: string;
   repository: string;
   family?: Product[];
+  familyClass?: string;
   builtOn?: Product[];
+  builtOnClass?: string;
 }
 
 const auspice: Product = {
@@ -37,7 +39,8 @@ const crux: Product = {
   name: "crux",
   description: "Sophisticated financial control.",
   repository: "https://github.com/terranesoftware/crux",
-  builtOn: [rebus]
+  builtOn: [rebus],
+  builtOnClass: "ml-auto max-[427px]:basis-full max-[427px]:ml-0"
 };
 
 const estate: Product = {
@@ -62,7 +65,8 @@ const ken: Product = {
   name: "ken",
   description: "The text editor is back.",
   repository: "https://github.com/terranesoftware/ken",
-  builtOn: [pecia]
+  builtOn: [pecia],
+  builtOnClass: "ml-auto max-[392px]:basis-full max-[392px]:ml-0"
 };
 
 const mizuchi: Product = {
@@ -75,7 +79,8 @@ const koine: Product = {
   name: "koine",
   description: "Yet another lingua franca.",
   repository: "https://github.com/terranesoftware/koine",
-  family: [mizuchi]
+  family: [mizuchi],
+  familyClass: "ml-auto max-[358px]:basis-full max-[358px]:ml-0"
 };
 
 const mantle: Product = {
@@ -100,7 +105,8 @@ const varve: Product = {
   name: "varve",
   description: "Work shouldn't go to waste.",
   repository: "https://github.com/terranesoftware/varve",
-  family: [basin, framboid, mantle, ophite]
+  family: [basin, framboid, mantle, ophite],
+  familyClass: "ml-auto max-[798px]:basis-full max-[798px]:ml-0"
 };
 
 export const products: Product[] = [
@@ -116,7 +122,7 @@ export const products: Product[] = [
   varve
 ];
 
-export function Card({ name, description, repository, family, builtOn }: Product) {
+export function Card({ name, description, repository, family, familyClass, builtOn, builtOnClass }: Product) {
   if (name == "" || description == "" || repository == "") {
     return null;
   }
@@ -126,7 +132,7 @@ export function Card({ name, description, repository, family, builtOn }: Product
       <div className={styles.title}>
         <h2 className={styles.name}><a className="link" href={repository} target="_blank" rel="noopener noreferrer">{name}</a></h2>
         {family && (
-          <h3 className={styles.optional}>
+          <h3 className={`${styles.optional} ${familyClass ?? ""}`}>
             {
               family.map((product, index) => (
                 <Fragment key={product.name}>
@@ -137,9 +143,10 @@ export function Card({ name, description, repository, family, builtOn }: Product
             }
           </h3>
         )}
+        {/* Check how this styles once we actually need it. Could possibly need another optional field on the interface. */}
         {family && builtOn && <h3 className={`${styles.optional} ${styles.separator}`}> | </h3>}
         {builtOn && (
-          <h3 className={styles.optional}>
+          <h3 className={`${styles.optional} ${builtOnClass ?? ""}`}>
             Built on{" "}
             {
               builtOn.map((product, index) => (
