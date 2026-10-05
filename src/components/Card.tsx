@@ -40,7 +40,7 @@ const crux: Product = {
   description: "Sophisticated financial control.",
   repository: "https://github.com/terranesoftware/crux",
   builtOn: [rebus],
-  builtOnClass: "ml-auto max-[427px]:basis-full max-[427px]:ml-0"
+  builtOnClass: "ml-auto max-[451px]:basis-full max-[451px]:ml-0"
 };
 
 const estate: Product = {
@@ -66,7 +66,7 @@ const ken: Product = {
   description: "The text editor is back.",
   repository: "https://github.com/terranesoftware/ken",
   builtOn: [pecia],
-  builtOnClass: "ml-auto max-[392px]:basis-full max-[392px]:ml-0"
+  builtOnClass: "ml-auto max-[416px]:basis-full max-[416px]:ml-0"
 };
 
 const mizuchi: Product = {
@@ -80,7 +80,7 @@ const koine: Product = {
   description: "Yet another lingua franca.",
   repository: "https://github.com/terranesoftware/koine",
   family: [mizuchi],
-  familyClass: "ml-auto max-[358px]:basis-full max-[358px]:ml-0"
+  familyClass: "ml-auto max-[382px]:basis-full max-[382px]:ml-0"
 };
 
 const mantle: Product = {
@@ -106,7 +106,7 @@ const varve: Product = {
   description: "Work shouldn't go to waste.",
   repository: "https://github.com/terranesoftware/varve",
   family: [basin, framboid, mantle, ophite],
-  familyClass: "ml-auto max-[798px]:basis-full max-[798px]:ml-0"
+  familyClass: "ml-auto max-[822px]:basis-full max-[822px]:ml-0"
 };
 
 export const products: Product[] = [
