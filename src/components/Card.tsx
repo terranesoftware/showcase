@@ -55,10 +55,18 @@ const framboid: Product = {
   repository: "https://github.com/terranesoftware/framboid"
 };
 
+const catena: Product = {
+  name: "catena",
+  description: "Read between the lines.",
+  repository: "https://github.com/terranesoftware/catena"
+};
+
 const pecia: Product = {
   name: "pecia",
   description: "Text, and only text.",
-  repository: "https://github.com/terranesoftware/pecia"
+  repository: "https://github.com/terranesoftware/pecia",
+  family: [catena],
+  familyClass: "ml-auto max-[354px]:basis-full max-[354px]:ml-0"
 };
 
 const ken: Product = {
