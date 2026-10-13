@@ -26,7 +26,7 @@ const basin: Product = {
 const gangway: Product = {
   name: "gangway",
   description: "It's like playing telephone — but with one person, repeatedly.",
-  repository: "https://crates.io/crates/gangway"
+  repository: "https://github.com/terranesoftware/gangway"
 };
 
 const rebus: Product = {
