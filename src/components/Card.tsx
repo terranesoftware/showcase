@@ -23,6 +23,12 @@ const basin: Product = {
   repository: "https://github.com/terranesoftware/basin"
 }
 
+const catena: Product = {
+  name: "catena",
+  description: "Read between the lines.",
+  repository: "https://github.com/terranesoftware/catena"
+};
+
 const gangway: Product = {
   name: "gangway",
   description: "It's like playing telephone — but with one person, repeatedly.",
@@ -55,18 +61,10 @@ const framboid: Product = {
   repository: "https://github.com/terranesoftware/framboid"
 };
 
-const catena: Product = {
-  name: "catena",
-  description: "Read between the lines.",
-  repository: "https://github.com/terranesoftware/catena"
-};
-
 const pecia: Product = {
   name: "pecia",
   description: "Text, and only text.",
-  repository: "https://github.com/terranesoftware/pecia",
-  family: [catena],
-  familyClass: "ml-auto max-[354px]:basis-full max-[354px]:ml-0"
+  repository: "https://github.com/terranesoftware/pecia"
 };
 
 const ken: Product = {
@@ -89,6 +87,12 @@ const koine: Product = {
   repository: "https://github.com/terranesoftware/koine",
   family: [mizuchi],
   familyClass: "ml-auto max-[382px]:basis-full max-[382px]:ml-0"
+};
+
+const landmine: Product = {
+  name: "landmine",
+  description: "Boom.",
+  repository: "https://github.com/terranesoftware/landmine"
 };
 
 const mantle: Product = {
@@ -119,11 +123,13 @@ const varve: Product = {
 
 export const products: Product[] = [
   auspice,
+  catena,
   crux,
   estate,
   gangway,
   ken,
   koine,
+  landmine,
   pecia,
   posit,
   rebus,
